@@ -1,0 +1,56 @@
+[versions]
+agp = "9.2.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.10.0"
+constraintlayout = "2.1.4"
+lifecycleLivedataKtx = "2.6.1"
+lifecycleViewmodelKtx = "2.6.1"
+navigationFragment = "2.6.0"
+navigationUi = "2.6.0"
+activity = "1.8.0"
+googleGmsGoogleServices = "4.4.3"
+firebaseAi = "17.2.0"
+legacySupportV4 = "1.0.0"
+cardview = "1.0.0"
+recyclerview = "1.4.0"
+fragment = "1.8.9"
+navigationFragmentVersion = "2.4.2"
+navigationUiVersion = "2.9.5"
+androidxNavigationFragment = "2.9.5"
+androidxNavigationUi = "2.9.6"
+gridlayout = "1.1.0"
+androidxNavigationFragmentVersion = "2.9.7"
+androidxNavigationUiVersion = "2.9.7"
+
+[libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+firebase-ai = { group = "com.google.firebase", name = "firebase-ai", version.ref = "firebaseAi" }
+legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
+cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
+recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+fragment = { group = "androidx.fragment", name = "fragment", version.ref = "fragment" }
+androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragmentVersion" }
+androidx-navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUiVersion" }
+androidx-navigation-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "androidxNavigationFragment" }
+androidx-navigation-navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "androidxNavigationUi" }
+androidx-gridlayout = { group = "androidx.gridlayout", name = "gridlayout", version.ref = "gridlayout" }
+androidx-navigation-navigation-fragment2 = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "androidxNavigationFragmentVersion" }
+androidx-navigation-navigation-ui2 = { group = "androidx.navigation", name = "navigation-ui", version.ref = "androidxNavigationUiVersion" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+

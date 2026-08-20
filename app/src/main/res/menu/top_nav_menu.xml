@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/top_coin"
+        android:icon="@mipmap/coin_icon_foreground"
+        android:title="@string/coins"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/top_no_of_coins"
+        android:title="@string/_00"
+        app:actionLayout="@layout/menu_coins_layout"
+        app:showAsAction="ifRoom" />
+
+</menu>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "743243355338",
+    "project_id": "tic-tac-toe-online-app-b97f2",
+    "storage_bucket": "tic-tac-toe-online-app-b97f2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743243355338:android:5044e9e7c0f159f935d033",
+        "android_client_info": {
+          "package_name": "com.rituraj.tictactoeonlineapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743243355338-glpr7ir02hha8vj7un6kgp6l6i06k3nf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rituraj.tictactoeonlineapp",
+            "certificate_hash": "6e32a4bc5b89d39bd83b0033d2c84eec2ae0470a"
+          }
+        },
+        {
+          "client_id": "743243355338-to6fgiv751baem94hfe2dpd0gpqqg6f2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASdjQVilXaTh27E0Sw41UwHexuJTATJKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743243355338-to6fgiv751baem94hfe2dpd0gpqqg6f2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

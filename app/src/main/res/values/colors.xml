@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design Colors (kept original) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- Base Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Tic Tac Toe Theme Colors - Game Board -->
+    <color name="game_board_bg">#F5F5F5</color>
+    <color name="game_cell_border">#BDBDBD</color>
+    <color name="player_x">#FF5252</color>  <!-- Vibrant red for X -->
+    <color name="player_o">#448AFF</color>  <!-- Vibrant blue for O -->
+    <color name="player_x_light">#FF8A80</color>  <!-- Light red for highlights -->
+    <color name="player_o_light">#82B1FF</color>  <!-- Light blue for highlights -->
+    <color name="winning_line">#4CAF50</color>  <!-- Green for winning combination -->
+
+    <!-- Primary Theme Colors (reorganized) -->
+    <color name="primary">#6200EE</color>           <!-- Main primary color -->
+    <color name="primary_variant">#3700B3</color>   <!-- Dark variant -->
+    <color name="primary_light">#BB86FC</color>     <!-- Light variant -->
+    <color name="secondary">#03DAC5</color>         <!-- Secondary/accent color -->
+    <color name="secondary_variant">#018786</color> <!-- Dark secondary -->
+
+    <!-- UI Element Colors -->
+    <color name="background">#F5F5F5</color>        <!-- Main background -->
+    <color name="surface">#FFFFFF</color>           <!-- Cards, dialogs, etc. -->
+    <color name="error">#F44336</color>             <!-- Error color -->
+    <color name="success">#4CAF50</color>           <!-- Success color -->
+    <color name="warning">#FFC107</color>           <!-- Warning color -->
+    <color name="info">#2196F3</color>              <!-- Info color -->
+
+    <!-- Text Colors -->
+    <color name="text_primary">#DE000000</color>    <!-- High emphasis text -->
+    <color name="text_secondary">#8A000000</color>  <!-- Medium emphasis text -->
+    <color name="text_hint">#61000000</color>       <!-- Hint/disabled text -->
+    <color name="text_primary_inverse">#DEFFFFFF</color>  <!-- White text -->
+    <color name="text_secondary_inverse">#8AFFFFFF</color> <!-- White secondary -->
+
+    <!-- Gray Scale (organized by weight) -->
+    <color name="gray_50">#FAFAFA</color>
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#757575</color>
+    <color name="gray_700">#616161</color>
+    <color name="gray_800">#424242</color>
+    <color name="gray_900">#212121</color>
+
+    <!-- Brown Theme Colors (renamed for clarity) -->
+    <color name="brown_light">#DEB887</color>   <!-- BurlyWood -->
+    <color name="brown_medium">#F4A460</color>  <!-- SandyBrown -->
+    <color name="brown_dark">#A0522D</color>    <!-- Sienna -->
+    <color name="brown_darker">#8B4513</color>  <!-- SaddleBrown -->
+    <color name="brown_darkest">#4E342E</color> <!-- DarkBrown -->
+    <color name="background_light_gray">#F8F9FA</color>
+    <color name="blur_blue">#4D2196F3</color>
+    <color name="colorPrimary">#1A1A2E</color>
+    <color name="primary_blue">#2E5BFF</color>
+    <color name="ad_background">#FFF3CD</color>
+    <color name="ad_background2">#1AFFD700</color>
+    <color name="ad_button">#FFD700</color>
+
+    <!-- Game Specific Colors -->
+    <color name="splash_background_start">#667eea</color>  <!-- Splash gradient start -->
+    <color name="splash_background_end">#764ba2</color>    <!-- Splash gradient end -->
+    <color name="game_accent_gold">#FFD700</color>         <!-- Text gold -->
+    <color name="game_accent_yellow">#FBC02D</color>       <!-- Dark yellow -->
+    <color name="game_accent_green">#006400</color>        <!-- Dark green -->
+
+    <!-- Status Bar Colors -->
+    <color name="status_bar_default">#3700B3</color>
+    <color name="status_bar_success">#2E7D32</color>
+    <color name="status_bar_error">#C62828</color>
+
+    <!-- Navigation Colors -->
+    <color name="nav_background">#FFFFFF</color>
+    <color name="nav_icon_selected">#6200EE</color>
+    <color name="nav_icon_default">#757575</color>
+    <color name="nav_text_selected">#6200EE</color>
+    <color name="nav_text_default">#757575</color>
+
+    <!-- Legacy Colors (kept for backward compatibility) -->
+    <color name="BurlyWood">#DEB887</color>
+    <color name="SandyBrown">#F4A460</color>
+    <color name="Sienna">#A0522D</color>
+    <color name="SaddleBrown">#8B4513</color>
+    <color name="DarkBrown">#4E342E</color>
+    <color name="green">#006400</color>
+    <color name="dark_yellow">#FBC02D</color>
+    <color name="text_gold">#FFD700</color>
+    <color name="splash_background">#667eea</color>
+
+    <!-- Modern palette (kept for compatibility) -->
+    <color name="primary_color">#6200EE</color>
+    <color name="primary_dark">#3700B3</color>
+    <color name="accent_color">#03DAC5</color>
+    <color name="background_light">#F5F5F5</color>
+    <color name="background_dark">#121212</color>
+    <color name="gray_light">#E0E0E0</color>
+    <color name="gray_medium">#9E9E9E</color>
+    <color name="gray_dark">#616161</color>
+
+    <color name="card_background">#1E293B</color>
+    <color name="surface_dark">#1E293B</color>
+    <color name="player_name">#F1F5F9</color>
+    <color name="player_email">#94A3B8</color>
+    <color name="win_rate">#10B981</color>
+    <color name="level_text">#F59E0B</color>
+    <color name="coins_gold">#FBBF24</color>
+    <color name="stat_text">#94A3B8</color>
+    <color name="last_score">#8B5CF6</color>
+    <color name="rank_text">#F1F5F9</color>
+    <color name="accent">#8B5CF6</color>
+
+    <!--    Ad Colors-->
+    <color name="gnt_test_background_color">#00F4F4F4</color>
+    <color name="gnt_test_background_color_2">#00A3A3A3</color>
+    <color name="gnt_black">#000000</color>
+    <color name="gnt_white">#FFFFFF</color>
+    <color name="gnt_red">#FF0000</color>
+    <color name="gnt_green">#00FF00</color>
+    <color name="gnt_blue">#4285f4</color>
+    <color name="gnt_ad_green">#3A6728</color>
+    <color name="gnt_gray">#808080</color>
+    <color name="gnt_outline">#E0E0E0</color>
+</resources>

@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Tic Tac Toe AI</string>
+    <string name="game_services_project_id">743243355338</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="default_web_client_id">743243355338-to6fgiv751baem94hfe2dpd0gpqqg6f2.apps.googleusercontent.com</string>
+    <string name="coins">coins</string>
+    <string name="_00">00</string>
+    <string name="preparing_game">Preparing game...</string>
+    <string name="tic_tac_toe">Tic Tac Toe</string>
+    <string name="version_1_0_0">Version 1.0.0</string>
+    <string name="online_multiplayer">Online Multiplayer</string>
+    <string name="by_continuing_you_agree_to_our_nterms_of_service_and_privacy_policy">By continuing, you agree to our\nTerms of Service and Privacy Policy</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="choose_your_game_mode">Choose your game mode</string>
+    <string name="play_with_friend">Play With Friend</string>
+    <string name="play_online">Play Online</string>
+    <string name="play_with_ai">Play with AI</string>
+    <string name="classic_mode">Classic Mode</string>
+    <string name="invites">Invites</string>
+    <string name="invite_friends_and_earn">Invite Friends and Earn</string>
+    <string name="your_referral_stats">Your Referral Stats</string>
+    <string name="new_game">New Game</string>
+    <string name="multiplyer">Multiplyer</string>
+    <string name="todo">TODO</string>
+    <string name="redeem_code">Redeem Code</string>
+    <string name="enter_your_unique_code_below_we_ll_validate_and_simulate_a_submission">Enter your unique code below — we’ll validate and simulate a submission.</string>
+    <string name="promo_gift_code">🎫 Promo / gift code</string>
+    <string name="e_g_vdpaqqwtgrf58qrdzfufgwaqkt32">e.g. vdPAQqwtGrf58QrDzfufgWAqkT32</string>
+    <string name="submit_redeem_code">✨ Submit redeem code</string>
+
+    <string-array name="sort_options">
+        <item>Win Rate</item>
+        <item>Rank</item>
+        <item>Coins</item>
+        <item>Level</item>
+    </string-array>
+
+    // Ad Mob
+    <string name="app_id">ca-app-pub-9877531238720230~3638125238</string>
+    <string name="app_open_ad_unit_id">ca-app-pub-9877531238720230/1454815026</string>
+    <string name="main_banner_id">ca-app-pub-9877531238720230/2104584113</string>
+    <string name="Ai_end_game_rewarded_unit_id">ca-app-pub-9877531238720230/4667034829</string>
+    <string name="classic_end_game_interstitial_unit_id">ca-app-pub-9877531238720230/5106018529</string>
+    <string name="advance_ai_ad">ca-app-pub-9877531238720230/5877176074</string>
+    <string name="online_end_game_interstitial_unit_id">ca-app-pub-9877531238720230/6323998320</string>
+    <string name="home_Rewarded_AdUnit_ID">ca-app-pub-9877531238720230/2899793057</string>
+    <string name="game_banner_ad_id1">ca-app-pub-9877531238720230/9783532078</string>
+    <string name="game_banner_ad_id2">ca-app-pub-9877531238720230/2275876442</string>
+</resources>
