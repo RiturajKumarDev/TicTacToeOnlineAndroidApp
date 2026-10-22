@@ -1,9 +1,33 @@
 <resources>
 
     <style name="ToolbarTitleStyle">
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:shadowColor">#80000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">3</item>
+        <item name="android:shadowRadius">6</item>
+    </style>
+
+    <style name="NavActiveText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-bold</item>
+        <item name="android:textColor">#FFD700</item>
+    </style>
+
+    <style name="NavInactiveText">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">#B3FFFFFF</item>
+    </style>
+
+    <style name="NavActiveIndicatorStyle" parent="">
+        <item name="android:width">56dp</item>
+        <item name="android:height">32dp</item>
+        <item name="color">@color/nav_indicator_color</item>
     </style>
 
 </resources>

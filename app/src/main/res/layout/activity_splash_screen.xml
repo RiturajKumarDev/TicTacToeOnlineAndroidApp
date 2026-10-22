@@ -5,120 +5,183 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/splash_background"
+    android:background="@drawable/splash_gradient_background"
     tools:context=".SplashScreen">
 
-    <!-- Animated gradient background (can be implemented programmatically) -->
+    <!-- Ambient Rotating Background Circle (Top-Left) -->
     <View
-        android:id="@+id/gradientBackground"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/splash_gradient_background" />
+        android:id="@+id/splashCircle1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:alpha="0.12"
+        android:background="@drawable/circle_white_transparent"
+        android:translationX="-60dp"
+        android:translationY="-60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Ambient Rotating Background Circle (Bottom-Right) -->
+    <View
+        android:id="@+id/splashCircle2"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:alpha="0.12"
+        android:background="@drawable/circle_white_transparent"
+        android:translationX="80dp"
+        android:translationY="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Floating Background X Symbol (Top-Right) -->
+    <ImageView
+        android:id="@+id/floatingX"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="32dp"
+        android:alpha="0.3"
+        android:contentDescription="Floating X"
+        android:src="@drawable/x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Floating Background O Symbol (Bottom-Left) -->
+    <ImageView
+        android:id="@+id/floatingO"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="120dp"
+        android:alpha="0.3"
+        android:contentDescription="Floating O"
+        android:src="@drawable/o"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Main Content Layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
+        android:paddingHorizontal="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- App Logo with elevation and shadow -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:layout_gravity="center"
-            android:translationZ="8dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="32dp"
-            app:cardElevation="16dp"
-            app:cardPreventCornerOverlap="true">
+        <!-- Logo Container with Glowing Aura Ring -->
+        <FrameLayout
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center">
 
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:importantForAccessibility="no"
-                android:padding="24dp"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/game_app_logo" />
+            <!-- Glowing Pulse Aura Ring (Positioned Behind Logo) -->
+            <View
+                android:id="@+id/splashGlowRing"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:background="@drawable/splash_glow_ring" />
 
-        </androidx.cardview.widget.CardView>
+            <!-- Circular App Logo Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/splashLogoCard"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:translationZ="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="60dp"
+                app:cardElevation="16dp">
 
-        <!-- App Name with style -->
-        <TextView
-            android:id="@+id/textView26"
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Game Logo"
+                    android:padding="16dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/game_app_logo_cir" />
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+
+        <!-- Title & Subtitle Container -->
+        <LinearLayout
+            android:id="@+id/titleContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:letterSpacing="0.05"
-            android:shadowColor="#80000000"
-            android:shadowDx="2"
-            android:shadowDy="2"
-            android:shadowRadius="4"
-            android:text="@string/tic_tac_toe"
-            android:textColor="@android:color/white"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
 
-        <!-- Subtitle -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="sans-serif"
-            android:gravity="center"
-            android:letterSpacing="0.03"
-            android:text="@string/online_multiplayer"
-            android:textColor="#E0E0E0"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="sans-serif-bold"
+                android:gravity="center"
+                android:letterSpacing="0.04"
+                android:shadowColor="#60000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="4"
+                android:text="@string/app_name"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
 
-        <!-- Spacer -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:letterSpacing="0.03"
+                android:text="Play Online, Challenge AI &amp; Win Rewards"
+                android:textColor="#EEFFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
         <Space
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="60dp" />
 
-        <!-- Progress indicator with text -->
+        <!-- Progress Indicator Container -->
         <LinearLayout
-            android:layout_width="280dp"
+            android:id="@+id/progressContainer"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="48dp"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <!-- Loading text -->
             <TextView
                 android:id="@+id/loadingText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:fontFamily="sans-serif"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-medium"
                 android:text="@string/preparing_game"
-                android:textColor="#B0B0B0"
-                android:textSize="14sp" />
+                android:textColor="#CCFFFFFF"
+                android:textSize="13sp" />
 
-            <!-- Custom progress bar -->
             <ProgressBar
                 android:id="@+id/progressBar"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
                 android:indeterminate="true"
-                android:progressBackgroundTint="#4D808080"
+                android:progressBackgroundTint="#4DFFFFFF"
                 android:progressTint="@android:color/white" />
 
-            <!-- Version info -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/version_1_0_0"
-                android:textColor="#80FFFFFF"
+                android:textColor="#99FFFFFF"
                 android:textSize="12sp" />
 
         </LinearLayout>

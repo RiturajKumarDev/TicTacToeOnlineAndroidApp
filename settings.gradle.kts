@@ -21,6 +21,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Tic Tac Toe AI"
+rootProject.name = "Tic Tac Toe Pro AI"
 include(":app")
  

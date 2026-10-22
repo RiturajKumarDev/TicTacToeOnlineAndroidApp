@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tic Tac Toe AI</string>
+    <string name="app_name">Tic Tac Toe Pro AI</string>
     <string name="game_services_project_id">743243355338</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>

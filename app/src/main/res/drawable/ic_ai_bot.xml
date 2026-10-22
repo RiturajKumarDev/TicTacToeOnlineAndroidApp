@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Antenna Globe -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,1.5a1.5,1.5 0 1,0 0,3 1.5,1.5 0 1,0 0,-3"/>
+
+    <!-- Antenna Stem -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M12,4.5v2.5"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.8"/>
+
+    <!-- Robot Head Shell with Transparent Cutout Eyes -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M5,7h14a2.5,2.5 0,0 1,2.5 2.5v7a2.5,2.5 0,0 1,-2.5 2.5H5A2.5,2.5 0,0 1,2.5 16.5v-7A2.5,2.5 0,0 1,5 7z M8.5,11.5a1.5,1.5 0 1,0 0,3 1.5,1.5 0 0,0 0,-3z M15.5,11.5a1.5,1.5 0 1,0 0,3 1.5,1.5 0 0,0 0,-3z"/>
+
+    <!-- Smile Line -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M9,16h6"
+        android:strokeColor="#059669"
+        android:strokeLineCap="round"
+        android:strokeWidth="1.5"/>
+
+    <!-- Ears -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M1,10.5h1.5v3H1z M21.5,10.5H23v3h-1.5z"/>
+</vector>

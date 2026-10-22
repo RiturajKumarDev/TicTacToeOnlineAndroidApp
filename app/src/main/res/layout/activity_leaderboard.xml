@@ -1,156 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_gradient_background"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.activities.LeaderboardActivity">
 
-    <!-- Header -->
-    <LinearLayout
+    <!-- Header Bar with Back Button -->
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/primary_dark"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingHorizontal="16dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="12dp">
 
-        <TextView
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_circle_container"
+            android:clickable="true"
+            android:contentDescription="Back"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@android:color/white" />
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="🏆 Leaderboard"
-            android:textColor="@color/white"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@id/btnBack"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-bold"
+                android:text="🏆 Global Leaderboard"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top players ranked by performance"
+                android:textColor="#DDFFFFFF"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Stats Summary Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        app:cardBackgroundColor="#25FFFFFF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Top players ranked by performance"
-            android:textColor="@color/text_primary_inverse"
-            android:textSize="14sp" />
-    </LinearLayout>
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:weightSum="3">
 
-    <!-- Stats Summary -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTotalPlayers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-bold"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Total Players"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="4dp"
+                android:background="#30FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAvgWinRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-bold"
+                    android:text="0%"
+                    android:textColor="@color/coins_gold"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Avg Win Rate"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="4dp"
+                android:background="#30FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTopScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-bold"
+                    android:text="0"
+                    android:textColor="@color/win_rate"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Top Score"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Search and Filter Bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/surface_dark"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="16dp">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tvTotalPlayers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textColor="@color/accent"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Players"
-                android:textColor="@android:color/white"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tvAvgWinRate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0%"
-                android:textColor="@color/accent"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Avg Win Rate"
-                android:textColor="@android:color/white"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tvTopScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textColor="@color/accent"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Top Score"
-                android:textColor="@android:color/white"
-                android:textSize="12sp" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <!-- Search and Filter -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:background="@color/surface_dark"
-        android:orientation="horizontal"
-        android:padding="12dp">
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="8dp">
 
         <EditText
             android:id="@+id/etSearch"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
             android:background="@drawable/search_background"
             android:hint="🔍 Search player..."
             android:imeOptions="actionSearch"
             android:inputType="text"
-            android:padding="12dp"
+            android:paddingHorizontal="16dp"
             android:textColor="@color/white"
-            android:textColorHint="@color/text_secondary" />
+            android:textColorHint="#90FFFFFF"
+            android:textSize="14sp" />
 
         <Spinner
             android:id="@+id/spinnerSort"
             android:layout_width="120dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_marginStart="8dp"
             android:background="@drawable/spinner_background"
             android:entries="@array/sort_options" />
     </LinearLayout>
 
-    <!-- RecyclerView for Leaderboard -->
+    <!-- RecyclerView for Leaderboard Items -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvLeaderboard"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:clipToPadding="false"
-        android:paddingVertical="8dp" />
+        android:paddingBottom="16dp" />
 
     <!-- Empty State -->
     <LinearLayout
@@ -163,26 +219,29 @@
         android:visibility="gone">
 
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:alpha="0.6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:alpha="0.7"
+            android:contentDescription="Empty Leaderboard"
             android:src="@drawable/ic_empty_leaderboard" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="No players found"
-            android:textColor="@color/text_secondary"
-            android:textSize="18sp" />
+            android:fontFamily="sans-serif-bold"
+            android:text="No Players Found"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Try adjusting your search"
-            android:textColor="@color/text_secondary"
-            android:textSize="14sp" />
+            android:layout_marginTop="4dp"
+            android:text="Try searching with a different name"
+            android:textColor="#CCFFFFFF"
+            android:textSize="13sp" />
     </LinearLayout>
 
 </LinearLayout>

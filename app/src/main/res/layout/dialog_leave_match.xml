@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    app:cardBackgroundColor="#F2FFFFFF"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Glowing Leave Icon Badge -->
+        <FrameLayout
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/icon_circle_container"
+            android:backgroundTint="#FEE2E2">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:contentDescription="Leave Icon"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                app:tint="#EF4444" />
+        </FrameLayout>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/dialogLeaveTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-bold"
+            android:text="LEAVE MATCH? 🚪"
+            android:textColor="@color/gray_900"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Warning Message Banner -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="22dp"
+            app:cardBackgroundColor="#80F8FAFC"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <TextView
+                android:id="@+id/dialogLeaveMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:padding="16dp"
+                android:text="Are you sure you want to forfeit? Your opponent will be awarded an automatic win."
+                android:textColor="@color/gray_800"
+                android:textSize="14sp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Buttons Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStayInMatch"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/primary_blue"
+                android:fontFamily="sans-serif-bold"
+                android:text="STAY &amp; PLAY 🎮"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:cornerRadius="14dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnForfeitLeave"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:fontFamily="sans-serif-bold"
+                android:text="FORFEIT &amp; LEAVE ❌"
+                android:textColor="#EF4444"
+                android:textSize="14sp"
+                app:cornerRadius="14dp"
+                app:strokeColor="#FCA5A5"
+                app:strokeWidth="1.5dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

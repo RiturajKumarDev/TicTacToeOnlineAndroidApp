@@ -7,21 +7,21 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.rituraj.tictactoeonlineapp.ui.home.HomeFragment"
+        android:name="com.rituraj.tictactoeonlineapp.ui.fragments.HomeFragment"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_invites"
-        android:name="com.rituraj.tictactoeonlineapp.ui.invite.InvitesFragment"
+        android:name="com.rituraj.tictactoeonlineapp.ui.fragments.InvitesFragment"
         tools:layout="@layout/fragment_invites" />
 
     <fragment
         android:id="@+id/navigation_multiplayer"
-        android:name="com.rituraj.tictactoeonlineapp.ui.multiplyer.MultiPlayerFragment"
+        android:name="com.rituraj.tictactoeonlineapp.ui.fragments.MultiPlayerFragment"
         tools:layout="@layout/fragment_multi_player" />
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.rituraj.tictactoeonlineapp.ui.profile.Profile"
+        android:name="com.rituraj.tictactoeonlineapp.ui.fragments.Profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

@@ -5,10 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="com.google.android.gms.permission.AD.ID" />
 
     <application
-        android:name=".ads.MyAppOpenAds"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -20,22 +18,22 @@
         android:theme="@style/Theme.TicTacToeOnlineApp"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.games.AdvanceAiActivity"
+            android:name=".ui.games.PlayHardAiActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.leaderboard.LeaderboardActivity"
+            android:name=".ui.activities.LeaderboardActivity"
             android:exported="false" />
         <activity
             android:name=".ui.games.OnlineModeActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.pages.SelectOnlineUser"
+            android:name=".ui.activities.SelectOnlineUser"
             android:exported="false" />
         <activity
             android:name=".ui.games.ClassicModeActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.games.PlayWithAiActivity"
+            android:name=".ui.games.PlayEasyAiActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -53,18 +51,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/app_id" />
-        <meta-data
-            android:name="com.google.android.gms.games.APP_ID"
-            android:value="@string/game_services_project_id" />
-
-        <property
-            android:name="android.adservices.AD_SERVICES_CONFIG"
-            android:resource="@xml/gma_ad_services_config"
-            tools:replace="android:resource" />
     </application>
 
 </manifest>

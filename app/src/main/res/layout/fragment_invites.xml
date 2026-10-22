@@ -4,267 +4,350 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.invite.InvitesFragment">
+    android:background="@color/background_light"
+    tools:context=".ui.fragments.InvitesFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="5sp"
         android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="28dp">
 
+            <!-- 1. Hero Invite Card -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/primary_blue"
-                app:cardCornerRadius="20dp">
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20sp"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_gradient_background"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🎁"
+                        android:textSize="40sp" />
 
                     <TextView
                         android:id="@+id/textView30"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5sp"
-                        android:gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-bold"
+                        android:gravity="center"
                         android:text="@string/invite_friends_and_earn"
                         android:textColor="@color/white"
-                        android:textSize="28sp"
+                        android:textSize="24sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView32"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5sp"
+                        android:layout_marginTop="4dp"
                         android:gravity="center"
-                        android:text="Share your code and earn 100 coins"
-                        android:textColor="@color/background_light_gray"
-                        android:textSize="18sp" />
+                        android:text="Share your code and earn 100 coins per referral!"
+                        android:textColor="#EEFFFFFF"
+                        android:textSize="14sp" />
 
+                    <!-- Code Container -->
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        app:cardBackgroundColor="@color/blur_blue"
-                        app:cardCornerRadius="15sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="12dp"
+                        app:cardBackgroundColor="#25FFFFFF"
+                        app:cardCornerRadius="16dp"
                         app:cardElevation="0dp">
 
                         <TextView
                             android:id="@+id/redeemCodeText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10sp"
+                            android:fontFamily="monospace"
                             android:gravity="center"
+                            android:padding="14dp"
                             android:text="CASH123"
                             android:textColor="@color/white"
-                            android:textSize="20sp"
+                            android:textSize="18sp"
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
 
-                    <Button
+                    <!-- Copy Code Button -->
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/redeemCodeCopyBtn"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:backgroundTint="@color/success"
-                        android:padding="17sp"
-                        android:text="copy code"
-                        android:textAllCaps="true"
-                        android:textSize="18sp"
-                        app:cornerRadius="10sp"
-                        app:icon="?attr/actionModeCopyDrawable"
+                        android:layout_height="54dp"
+                        android:backgroundTint="@color/win_rate"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Copy Referral Code"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:cornerRadius="14dp"
+                        app:icon="@drawable/ic_copy"
                         app:iconGravity="textStart"
-                        app:iconSize="20sp" />
+                        app:iconPadding="8dp"
+                        app:iconSize="20dp"
+                        app:iconTint="@color/white" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <!-- 2. Share Buttons Section -->
             <TextView
                 android:id="@+id/textView48"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                android:text="Share via"
-                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="sans-serif-bold"
+                android:text="📱 Share &amp; Invite"
+                android:textColor="@color/gray_800"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp">
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/shareWhatappBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10sp"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginEnd="6dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#25D366"
                     android:text="WhatsApp"
-                    android:textColor="@color/primary"
-                    app:cornerRadius="10sp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:cornerRadius="16dp"
                     app:icon="@drawable/whatsapp"
                     app:iconGravity="textStart"
-                    app:iconSize="20dp"
-                    app:iconTint="@color/success" />
+                    app:iconPadding="8dp"
+                    app:iconSize="22dp"
+                    app:iconTint="@null" />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/shareTelegramBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10sp"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="6dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#229ED9"
                     android:text="Telegram"
-                    android:textColor="@color/primary"
-                    app:cornerRadius="10sp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:cornerRadius="16dp"
                     app:icon="@drawable/telegram"
                     app:iconGravity="textStart"
-                    app:iconSize="20dp"
-                    app:iconTint="@color/primary" />
+                    app:iconPadding="8dp"
+                    app:iconSize="22dp"
+                    app:iconTint="@null" />
             </LinearLayout>
 
+            <!-- 3. How It Works Section -->
             <TextView
                 android:id="@+id/textView51"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                android:text="How it Works"
-                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="sans-serif-bold"
+                android:text="💡 How It Works"
+                android:textColor="@color/gray_800"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                app:cardCornerRadius="20dp">
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
-                    <TextView
-                        android:id="@+id/textView52"
+                    <!-- Step 1 -->
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"
-                        android:text="1. Share Your Code"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView53"
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/icon_circle_container"
+                            android:backgroundTint="@color/primary_blue"
+                            android:fontFamily="sans-serif-bold"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView52"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-bold"
+                                android:text="Share Your Code"
+                                android:textColor="@color/gray_900"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView53"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="Send your unique referral code to friends"
+                                android:textColor="@color/gray_600"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="14dp"
+                        android:background="@color/gray_200" />
+
+                    <!-- Step 2 -->
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5sp"
-                        android:layout_weight="1"
-                        android:text="Send your referral code to friends"
-                        android:textSize="18sp" />
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView54"
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/icon_circle_container"
+                            android:backgroundTint="@color/level_text"
+                            android:fontFamily="sans-serif-bold"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView54"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-bold"
+                                android:text="Friends Sign Up"
+                                android:textColor="@color/gray_900"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView55"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="Friends sign up using your referral code"
+                                android:textColor="@color/gray_600"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="14dp"
+                        android:background="@color/gray_200" />
+
+                    <!-- Step 3 -->
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5sp"
-                        android:layout_weight="1"
-                        android:text="2. They Sign Up"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView55"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5sp"
-                        android:layout_weight="1"
-                        android:text="Friends sign up using your code"
-                        android:textSize="18sp" />
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/icon_circle_container"
+                            android:backgroundTint="@color/win_rate"
+                            android:fontFamily="sans-serif-bold"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/textView56"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5sp"
-                        android:layout_weight="1"
-                        android:text="3. Earn Together"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView57"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5sp"
-                        android:layout_weight="1"
-                        android:text="You earn 10% of their earnings forever"
-                        android:textSize="18sp" />
+                            <TextView
+                                android:id="@+id/textView56"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-bold"
+                                android:text="Earn Rewards"
+                                android:textColor="@color/gray_900"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView57"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="Both you and your friend earn bonus coins!"
+                                android:textColor="@color/gray_600"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                app:cardCornerRadius="20dp">
+            <!-- 4. Withdraw Rewards Section -->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:orientation="vertical">
-
-                    <EditText
-                        android:id="@+id/editTextText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:background="@drawable/edit_text_border"
-                        android:ems="10"
-                        android:hint="e.g. 9876543210@ybl"
-                        android:inputType="text"
-                        android:padding="15dp" />
-
-                    <EditText
-                        android:id="@+id/editTextText2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:background="@drawable/edit_text_border"
-                        android:ems="10"
-                        android:hint="5000 (coins)"
-                        android:inputType="text"
-                        android:padding="15dp" />
-
-                    <Button
-                        android:id="@+id/withdrawCoinsBtn"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:backgroundTint="@color/primary_blue"
-                        android:padding="15dp"
-                        android:text="PROCEED TO WITHDRAW"
-                        app:cornerRadius="10dp" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/textView58"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

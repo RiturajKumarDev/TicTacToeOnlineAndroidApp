@@ -1,29 +1,79 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="20dp"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    app:cardBackgroundColor="#F2FFFFFF"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="12dp">
 
-    <TextView
-        android:id="@+id/txtTitle"
-        android:text="Choose First Turn"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/btnUser"
-        android:text="You"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"/>
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <Button
-        android:id="@+id/btnAI"
-        android:text="AI"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <FrameLayout
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/icon_circle_container"
+            android:backgroundTint="#FEE2E2">
 
-</LinearLayout>
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:contentDescription="Choice Icon"
+                android:src="@drawable/ic_ai_bot"
+                app:tint="#EF4444" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-bold"
+            android:text="Choose First Turn 🎯"
+            android:textColor="@color/gray_900"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Who should place the first move in this match?"
+            android:textColor="@color/gray_600"
+            android:textSize="13sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUser"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/primary_blue"
+            android:fontFamily="sans-serif-bold"
+            android:text="YOU START FIRST 👤"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:cornerRadius="14dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAI"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:fontFamily="sans-serif-bold"
+            android:text="LET AI START FIRST 🤖"
+            android:textColor="@color/gray_800"
+            android:textSize="14sp"
+            app:cornerRadius="14dp"
+            app:strokeColor="@color/gray_400" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

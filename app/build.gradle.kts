@@ -11,8 +11,8 @@ android {
         applicationId = "com.rituraj.tictactoeonlineapp"
         minSdk = 24
         targetSdk = 36
-        versionCode = 15
-        versionName = "2.1.3"
+        versionCode = 16
+        versionName = "2.2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -62,7 +62,7 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     // Firebase BOM (versions automatic handle honge)
-    implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.8.0"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
@@ -77,8 +77,7 @@ dependencies {
     implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
     implementation ("com.google.android.gms:play-services-auth:21.2.0")
 
-    // For Google ads
-    implementation("com.google.android.gms:play-services-ads:23.6.0")
+
     implementation("com.google.errorprone:error_prone_annotations:2.16")
     
     // Google Play Service

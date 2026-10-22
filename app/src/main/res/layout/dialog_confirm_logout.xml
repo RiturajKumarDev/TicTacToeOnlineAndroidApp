@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Logout Badge Icon -->
+        <FrameLayout
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/icon_circle_container"
+            android:backgroundTint="#FEE2E2">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:contentDescription="Logout Icon"
+                android:src="@drawable/ic_logout"
+                app:tint="#EF4444" />
+        </FrameLayout>
+
+        <!-- Title & Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-bold"
+            android:text="Log Out of Account?"
+            android:textColor="@color/gray_900"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:text="Are you sure you want to log out? You will need to sign in again to access your scores and rewards."
+            android:textColor="@color/gray_600"
+            android:textSize="13sp" />
+
+        <!-- Buttons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConfirmSignOut"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#EF4444"
+                android:fontFamily="sans-serif-bold"
+                android:text="Yes, Log Out"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:cornerRadius="14dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancelSignOut"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Cancel"
+                android:textColor="@color/gray_700"
+                android:textSize="14sp"
+                app:cornerRadius="14dp"
+                app:strokeColor="@color/gray_300" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

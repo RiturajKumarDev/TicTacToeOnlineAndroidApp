@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White Ring / Border for sharp contrast against photo background -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@android:color/white" />
+            <size
+                android:width="24dp"
+                android:height="24dp" />
+        </shape>
+    </item>
+    <!-- Vibrant Green Core Badge -->
+    <item
+        android:bottom="3.5dp"
+        android:left="3.5dp"
+        android:right="3.5dp"
+        android:top="3.5dp">
+        <shape android:shape="oval">
+            <solid android:color="#4CAF50" />
+            <size
+                android:width="17dp"
+                android:height="17dp" />
+        </shape>
+    </item>
+</layer-list>
